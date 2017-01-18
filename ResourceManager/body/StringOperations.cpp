@@ -3,6 +3,15 @@
 #include <iostream>
 #include <sstream>
 
+StringOperations::StringOperations()
+{
+}
+
+StringOperations::StringOperations(std::string string)
+	:string__(string)
+{
+}
+
 void StringOperations::loggerText(std::string simpleText) noexcept
 {	std::cout << simpleText << std::endl;
 	return;
@@ -80,4 +89,16 @@ std::string StringOperations::readString(std::string message) noexcept
 	} while (std::getline(std::cin, text));
 
 	return text;
+}
+
+std::ostream& 
+(operator<<)(std::ostream& out, StringOperations string_operations__)
+{	out << string_operations__.string__ << std::endl;
+	return out;
+}
+
+std::istream& 
+(operator>>)(std::istream& in, StringOperations string_operations__)
+{	in >> string_operations__.string__;
+	return in;
 }

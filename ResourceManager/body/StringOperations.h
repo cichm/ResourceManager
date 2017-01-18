@@ -3,6 +3,16 @@
 
 class StringOperations
 {
+private:
+	std::string string__;
+public:
+	(StringOperations)();
+public:
+	explicit (StringOperations)(std::string string);
+friend 
+	std::ostream &operator << (std::ostream &out, StringOperations string_operations__);
+friend
+	std::istream &operator >> (std::istream &in, StringOperations string_operations__);
 public:
 	static void (loggerText)(std::string simpleText) noexcept;
 public:
