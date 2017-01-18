@@ -17,7 +17,6 @@
 #include "body/ConcreteCreator.h"
 
 
-
 Creator* creator = new ConcreteCreator();
 
 void

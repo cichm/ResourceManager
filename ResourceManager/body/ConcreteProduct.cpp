@@ -8,10 +8,12 @@
 #include <iomanip>
 #include "StringOperations.h"
 #include "FileOperations.h"
+#include "interherence/ArrayOfObjects.h"
 
 void 
 (ConcreteProduct::HelpMe)(void)
-{	StringOperations::loggerText("\t@Pomoc w uzytkowaniu programu.");
+{	StringOperations string_operations__("\t@Pomoc w uzytkowaniu programu.");
+	std::cout << string_operations__;
 	StringOperations::loggerInfo("Program sluzy do tworzenia baz danych osob.");
 	StringOperations::loggerInfo("Aby moc sprawnie poslugiwac sie programem, nalezy przestrzegac kilku podstawowych wskazan:");
 	StringOperations::loggerInfo(" ~<> Gdy musisz odpowiedziec na dane pytanie za pomoca kilku slow: nie uzywaj \"pustego znaku\", ");
@@ -19,7 +21,6 @@ void
 	StringOperations::loggerInfo(" ~<> Nie nalezy udzielac wylgarnych odpowiedzi.");
 	StringOperations::loggerInfo("");
 	StringOperations::loggerInfo(" ~<> Odpowiedzi powinny byc jednoznaczne i musza odnosic sie do pytan.");
-
 	system("PAUSE");
 	return;
 }
@@ -38,35 +39,71 @@ void
 	return;
 }
 
-void 
+void
 (ConcreteProduct::AddNewPerson)(void)
 {	StringOperations::loggerText("\t@Dodawanie osoby do bazy danych.");
 	std::string currentFileName = StringOperations::readString("Wprowadz i zatwierdz baze danych na kotrej maja zostac wykonane operacje: ");
 	currentFileName += ".db";
 
-	std::string firstName		= StringOperations::readString("Wprowadz i zatwierdz imie osoby: ");
-	std::string lastName		= StringOperations::readString("Wprowadz i zatwierdz nazwisko osoby: ");
-	std::string yearOfBirth		= StringOperations::readString("Wprowadz i zatwierdz rok urodzenia: ");
-	std::string address			= StringOperations::readString("Wprowadz i zatwierdz miasto zamieszkania: ");
-	std::string firstAddress	= StringOperations::readString("Wprowadz i zatwierdz miasto rodzinne: ");
-	std::string position		= StringOperations::readString("Wprowadz i zatwierdz obecne stanowisko w pracy: ");
-	std::string hobby			= StringOperations::readString("Wprowadz i zatwierdz hobby: ");
+	// TODO: Funny joke =)
+	if (true) {
+		std::string firstName = StringOperations::readString("Wprowadz i zatwierdz imie osoby: ");
+		std::string lastName = StringOperations::readString("Wprowadz i zatwierdz nazwisko osoby: ");
+		std::string yearOfBirth = StringOperations::readString("Wprowadz i zatwierdz rok urodzenia: ");
+		std::string address = StringOperations::readString("Wprowadz i zatwierdz miasto zamieszkania: ");
+		std::string firstAddress = StringOperations::readString("Wprowadz i zatwierdz miasto rodzinne: ");
+		std::string position = StringOperations::readString("Wprowadz i zatwierdz obecne stanowisko w pracy: ");
+		std::string hobby = StringOperations::readString("Wprowadz i zatwierdz hobby: ");
 
-	std::vector < std::string > allOfThis;
-	allOfThis.push_back(".\t");
-	allOfThis.push_back(firstName + "\t");
-	allOfThis.push_back(lastName + "\t");
-	allOfThis.push_back(yearOfBirth + "\t");
-	allOfThis.push_back(address + "\t");
-	allOfThis.push_back(firstAddress + "\t");
-	allOfThis.push_back(position + "\t");
-	allOfThis.push_back(hobby + "\t");
+		std::vector < std::string > allOfThis;
+		allOfThis.push_back(".\t");
+		allOfThis.push_back(firstName + "\t");
+		allOfThis.push_back(lastName + "\t");
+		allOfThis.push_back(yearOfBirth + "\t");
+		allOfThis.push_back(address + "\t");
+		allOfThis.push_back(firstAddress + "\t");
+		allOfThis.push_back(position + "\t");
+		allOfThis.push_back(hobby + "\t");
 
-	allOfThis.push_back("\n");
+		allOfThis.push_back("\n");
 
-	FileOperations::saveVectorToFile(allOfThis, currentFileName);
+		FileOperations::saveVectorToFile(allOfThis, currentFileName);
 
-	StringOperations::loggerInfoNoEndl("Dane zostaly wpisane do pliku. ");
+		StringOperations::loggerInfoNoEndl("Dane zostaly wpisane do pliku. ");
+	}
+	else
+	{
+		ArrayOfObjects<std::string> array_of_objects_setter__[7];
+
+		array_of_objects_setter__->readMessage();
+
+		array_of_objects_setter__[0].set_value("Klaudia");
+		array_of_objects_setter__[1].set_value("Bogacka");
+		array_of_objects_setter__[2].set_value("1997");
+		array_of_objects_setter__[3].set_value("Katowice");
+		array_of_objects_setter__[4].set_value("Katowice");
+		array_of_objects_setter__[5].set_value("Student");
+		array_of_objects_setter__[6].set_value("Czytanie");
+
+		std::vector < std::string > allOfThis;
+		
+		allOfThis.push_back(".\t");
+		allOfThis.push_back(array_of_objects_setter__[0].Value + "\t");
+		allOfThis.push_back(array_of_objects_setter__[1].Value + "\t");
+		allOfThis.push_back(array_of_objects_setter__[2].Value + "\t");
+		allOfThis.push_back(array_of_objects_setter__[3].Value + "\t");
+		allOfThis.push_back(array_of_objects_setter__[4].Value + "\t");
+		allOfThis.push_back(array_of_objects_setter__[5].Value + "\t");
+		allOfThis.push_back(array_of_objects_setter__[6].Value + "\t");
+		allOfThis.push_back("\n");
+
+		FileOperations::saveVectorToFile(allOfThis, currentFileName);
+
+		StringOperations::loggerInfoNoEndl("Dane zostaly wpisane do pliku. ");
+
+		std::cout << std::endl;
+		system("PAUSE");
+	}
 
 	return;
 }
@@ -127,9 +164,9 @@ void
 	std::string peoplesurname = StringOperations::readString("Wprowadz nazwisko osoby i zatwierdz: ");
 
 	for (unsigned int i = 7; i < lines.size() + 1; i++) {
-		if(
-			lines[i - 7] == "." && 
-			lines[i - 6] == peopleName && 
+		if (
+			lines[i - 7] == "." &&
+			lines[i - 6] == peopleName &&
 			lines[i - 5] == peoplesurname
 			)
 		{
@@ -161,9 +198,11 @@ void
 	std::cout << std::endl;
 
 	system("PAUSE");
+	return;
 }
 
-void ConcreteProduct::SearchInBase()
+void 
+(ConcreteProduct::SearchInBase)(void)
 {
 	StringOperations::loggerText("\t@Edycja czlonkow bazy danych.");
 	std::string currentFileName = StringOperations::readString("Wprowadz i zatwierdz baze danych na kotrej maja zostac wykonane operacje: ");
@@ -182,4 +221,5 @@ void ConcreteProduct::SearchInBase()
 
 	std::cout << std::endl;
 	system("PAUSE");
+	return;
 }
