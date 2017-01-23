@@ -46,8 +46,8 @@ void
 	currentFileName += ".db";
 
 	// TODO: Funny joke =)
-	if (true) {
-		std::string firstName = StringOperations::readString("Wprowadz i zatwierdz imie osoby: ");
+	if (true) 
+	{	std::string firstName = StringOperations::readString("Wprowadz i zatwierdz imie osoby: ");
 		std::string lastName = StringOperations::readString("Wprowadz i zatwierdz nazwisko osoby: ");
 		std::string yearOfBirth = StringOperations::readString("Wprowadz i zatwierdz rok urodzenia: ");
 		std::string address = StringOperations::readString("Wprowadz i zatwierdz miasto zamieszkania: ");
@@ -72,8 +72,7 @@ void
 		StringOperations::loggerInfoNoEndl("Dane zostaly wpisane do pliku. ");
 	}
 	else
-	{
-		ArrayOfObjects<std::string> array_of_objects_setter__[7];
+	{	ArrayOfObjects<std::string> array_of_objects_setter__[7];
 
 		array_of_objects_setter__->readMessage();
 
