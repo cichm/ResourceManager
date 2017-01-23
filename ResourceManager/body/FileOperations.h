@@ -3,6 +3,11 @@
 #include <vector>
 #include <fstream>
 #include <iterator>
+#include <fstream>
+#include <iostream>
+
+#include "Exceptions/FileOpenException.h"
+#include "Exceptions/FileSaveException.h"
 
 class FileOperations
 {
@@ -50,9 +55,17 @@ std::vector<T> FileOperations::readFromFile(std::string fileName, unsigned short
 
 	if (!file.is_open())
 	{
-		std::cerr << "Error opening file : " << fileName << std::endl;
+		FileOpenException file_open_exception__;
+		try
+		{
+			throw file_open_exception__;
+		}
+		catch (std::exception& e)
+		{
+			std::cout << e.what() << std::endl;
+		}
 	}
-	else if(divideLines == false) {
+	if(divideLines == false) {
 		while (std::getline(file, line))
 		{
 			lines.push_back(line);

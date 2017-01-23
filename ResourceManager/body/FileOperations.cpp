@@ -1,11 +1,22 @@
 ﻿#include "stdafx.h"
 #include "FileOperations.h"
-#include <fstream>
 
 void 
 (FileOperations::createEmptyFile)(std::string fileName)
 {
 	std::fstream fs(fileName, std::ios::out | std::ios::binary);
+	if (!fs)
+	{
+		FileSaveException file_save_exception__;
+		try
+		{
+			throw file_save_exception__;
+		}
+		catch (std::exception& e)
+		{
+			std::cout << e.what() << std::endl;
+		}
+	}
 	fs.close();
 
 	return;
