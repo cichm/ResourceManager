@@ -22,45 +22,50 @@ Creator* creator = new ConcreteCreator();
 void
 (menu)(void) noexcept;
 
-void helpMe() {
-	creator->HelpMe();
+void 
+(helpMe)(void) 
+{	creator->HelpMe();
 }
 
-void createDatabase() {
-	creator->CreateDatabase();
+void 
+(createDatabase)(void) 
+{	creator->CreateDatabase();
 }
 
-void addNewPerson() {
-	creator->AddNewPerson();
+void 
+(addNewPerson)(void) 
+{	creator->AddNewPerson();
 }
 
-void standardModification() {
-	creator->StandardModification();
+void 
+(standardModification)(void) 
+{	creator->StandardModification();
 }
 
-void fileCount() {
-	creator->FileCount();
+void 
+(fileCount)(void) 
+{	creator->FileCount();
 }
 
-void readDatabase() {
-	creator->ReadDatabase();
+void 
+(readDatabase)(void) 
+{	creator->ReadDatabase();
 }
 
-void editDatabase()
-{
-	creator->EditDatabase();
+void 
+(editDatabase)(void)
+{	creator->EditDatabase();
 }
 
-void searchInBase()
-{
-	creator->SearchInBase();
+void 
+(searchInBase)(void)
+{	creator->SearchInBase();
 }
 
 typedef void(*voidFunctionType)(void);
 
-struct Interface {
-
-	std::map<int, std::pair<voidFunctionType, std::type_index>> m1;
+struct Interface 
+{	std::map<int, std::pair<voidFunctionType, std::type_index>> m1;
 
 	template<typename T>
 	void insert(int s1, T f1) {
@@ -75,26 +80,14 @@ struct Interface {
 		auto mapVal = mapIter->second;
 
 		auto typeCastedFun = (T(*)(Args ...))(mapVal.first);
-
-		try
-		{
-			assert(mapVal.second == std::type_index(typeid(typeCastedFun)));
-		}
-		catch (...)
-		{
-			std::cout <<
-				std::endl <<
-				"Metoda searchAndCall nie zostala wlasciwie wywolana."
-				<< std::endl;
-
-			std::this_thread::sleep_for(std::chrono::milliseconds(6000));
-		}
+		assert(mapVal.second == std::type_index(typeid(typeCastedFun)));
 
 		return typeCastedFun(std::forward<Args>(args)...);
 	}
 };
 
-int _tmain(int argc, _TCHAR* argv[])
+int 
+(_tmain)(int argc, _TCHAR* argv[])
 {
 	Interface interface;
 	unsigned short int valueHolder{ 0 };
@@ -113,6 +106,7 @@ int _tmain(int argc, _TCHAR* argv[])
 
 		std::cout << "~~~~>";
 		std::cin >> valueHolder;
+
 		interface.searchAndCall<void>(valueHolder);
 	}
 
