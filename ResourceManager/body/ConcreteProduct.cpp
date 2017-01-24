@@ -22,6 +22,7 @@ void
 	StringOperations::loggerInfo("");
 	StringOperations::loggerInfo(" ~<> Odpowiedzi powinny byc jednoznaczne i musza odnosic sie do pytan.");
 	system("PAUSE");
+
 	return;
 }
 
@@ -29,13 +30,14 @@ void
 (ConcreteProduct::CreateDatabase)(void)
 {	StringOperations::loggerText("\t@Tworzenie bazy danych.");
 
-	StringOperations::loggerQuestNoEndl("Jak ma nazywac sie plik : ");
+	StringOperations::loggerQuestNoEndl("Jak ma nazywac sie plik: ");
 	std::string fileName = StringOperations::readString("") + ".db";
 
 	FileOperations::pressWindowsCommand("del " + fileName);
 	FileOperations::createEmptyFile(fileName);
 	
 	StringOperations::loggerInfo(" Poprawnie utworzono plik " + fileName);
+
 	return;
 }
 
@@ -45,7 +47,7 @@ void
 	std::string currentFileName = StringOperations::readString("Wprowadz i zatwierdz baze danych na kotrej maja zostac wykonane operacje: ");
 	currentFileName += ".db";
 
-	// TODO: Funny joke =)
+	// TODO: Fast insert =)
 	if (true) 
 	{	std::string firstName = StringOperations::readString("Wprowadz i zatwierdz imie osoby: ");
 		std::string lastName = StringOperations::readString("Wprowadz i zatwierdz nazwisko osoby: ");
@@ -136,7 +138,7 @@ void
 (ConcreteProduct::ReadDatabase)(void)
 {
 	StringOperations::loggerText("\t@Wyswietlanie czlonkow bazy danych.");
-	std::string currentFileName = StringOperations::readString("Wprowadz i zatwierdz baze danych na kotrej maja zostac wykonane operacje : ");
+	std::string currentFileName = StringOperations::readString("Wprowadz i zatwierdz baze danych na kotrej maja zostac wykonane operacje: ");
 	currentFileName += ".db";
 
 	std::vector<std::string> lines = FileOperations::readFromFile<std::string>(currentFileName, 10000);
@@ -177,15 +179,13 @@ void
 			std::transform(checkPeople.begin(), checkPeople.end(), checkPeople.begin(), ::tolower);
 			if (checkPeople == "y" || checkPeople == "yes")
 			{
-				//lines.insert(i - 6, );
-
-				/*lines[i - 6] = StringOperations::readString("Wprowadz i zatwierdz imie osoby: ") + "\t";
+				lines[i - 6] = StringOperations::readString("Wprowadz i zatwierdz imie osoby: ") + "\t";
 				lines[i - 5] = StringOperations::readString("Wprowadz i zatwierdz nazwisko osoby: ") + "\t";
 				lines[i - 4] = StringOperations::readString("Wprowadz i zatwierdz rok urodzenia: ") + "\t";
 				lines[i - 3] = StringOperations::readString("Wprowadz i zatwierdz miasto zamieszkania: ") + "\t";
 				lines[i - 2] = StringOperations::readString("Wprowadz i zatwierdz miasto rodzinne: ") + "\t";
 				lines[i - 1] = StringOperations::readString("Wprowadz i zatwierdz obecne stanowisko w pracy: ") + "\t";
-				lines[i - 0] = StringOperations::readString("Wprowadz i zatwierdz hobby: ") + "\t" + "\n";*/
+				lines[i - 0] = StringOperations::readString("Wprowadz i zatwierdz hobby: ") + "\t" + "\n";
 			}
 		}
 	}
@@ -219,6 +219,7 @@ void
 	}
 
 	std::cout << std::endl;
+
 	system("PAUSE");
 	return;
 }
