@@ -1,40 +1,10 @@
-========================================================================
-    CONSOLE APPLICATION : ResourceManager Project Overview
-========================================================================
-
-AppWizard has created this ResourceManager application for you.
-
-This file contains a summary of what you will find in each of the files that
-make up your ResourceManager application.
-
-
-ResourceManager.vcxproj
-    This is the main project file for VC++ projects generated using an Application Wizard.
-    It contains information about the version of Visual C++ that generated the file, and
-    information about the platforms, configurations, and project features selected with the
-    Application Wizard.
-
-ResourceManager.vcxproj.filters
-    This is the filters file for VC++ projects generated using an Application Wizard. 
-    It contains information about the association between the files in your project 
-    and the filters. This association is used in the IDE to show grouping of files with
-    similar extensions under a specific node (for e.g. ".cpp" files are associated with the
-    "Source Files" filter).
-
-ResourceManager.cpp
-    This is the main application source file.
-
-/////////////////////////////////////////////////////////////////////////////
-Other standard files:
-
-StdAfx.h, StdAfx.cpp
-    These files are used to build a precompiled header (PCH) file
-    named ResourceManager.pch and a precompiled types file named StdAfx.obj.
-
-/////////////////////////////////////////////////////////////////////////////
-Other notes:
-
-AppWizard uses "TODO:" comments to indicate parts of the source code you
-should add to or customize.
-
-/////////////////////////////////////////////////////////////////////////////
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer placerat eleifend convallis. Donec laoreet, erat et ultrices elementum, justo orci auctor urna, quis condimentum nunc urna id tellus. Sed et leo at massa dignissim maximus eget quis quam. Quisque id orci orci. Interdum et malesuada fames ac ante ipsum primis in faucibus. Cras gravida vitae nibh tristique eleifend. Sed dictum luctus consectetur. Sed in mi at massa aliquet convallis. Nunc pulvinar elit at nulla mollis, non tincidunt arcu rutrum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Duis eu magna lectus. 
+In hac habitasse platea dictumst. Quisque luctus leo eget nunc placerat vulputate. Aenean finibus viverra diam, vulputate porta elit pretium tincidunt. Pellentesque semper dolor quis justo porttitor, eu dapibus orci tincidunt. Curabitur volutpat fringilla eros. Aliquam at dolor lobortis, ultrices velit id, varius lorem. In nec ex maximus, tempor nisl vel, placerat libero. Nunc lorem enim, fringilla vitae odio et, aliquet posuere risus. 
+Nam ullamcorper egestas sollicitudin. Sed facilisis mi purus, sit amet facilisis dolor accumsan ac. Pellentesque bibendum et urna non fringilla. Etiam tincidunt fringilla lacus, eget laoreet erat mollis ut. Aliquam erat volutpat. Vestibulum id lacinia augue, sit amet suscipit felis. Phasellus rutrum ac quam vel hendrerit. 
+Fusce egestas risus non dictum condimentum. Aenean egestas massa eu risus maximus, porttitor lobortis sapien congue. Pellentesque ornare, dolor vitae dictum dictum, magna dolor tempor mi, a faucibus sem nunc eget dui. Pellentesque porttitor leo at vestibulum hendrerit. Sed bibendum mollis blandit. In nisl mauris, porttitor eu elit sed, interdum iaculis arcu. Maecenas gravida mauris vitae porttitor varius. Curabitur sed dui lacinia, volutpat est id, dictum purus. Suspendisse tincidunt cursus sem, sed tincidunt lacus viverra ut. Vivamus vulputate faucibus magna a congue. Donec vitae ex at diam lacinia fermentum. 
+Praesent at cursus nulla. Nulla eget lacus luctus, suscipit tortor sed, hendrerit dui. In sit amet dolor vel ex maximus rutrum. Sed consectetur risus ultrices nunc accumsan tincidunt ac non orci. Mauris pulvinar sed dui non luctus. Integer ut diam nibh. Proin non arcu commodo, porta nulla in, viverra lacus. Nam ornare tellus eu turpis commodo, id blandit orci interdum. Sed sed scelerisque lorem, id molestie dui. Mauris pulvinar cursus scelerisque. 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vehicula diam vitae leo sagittis, nec egestas purus cursus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean scelerisque imperdiet nisi tempus consequat. Fusce egestas finibus metus. Pellentesque volutpat faucibus ex, tincidunt euismod purus mollis a. In condimentum lacus dolor, ac congue felis tincidunt vehicula. Aenean ut massa eget massa sollicitudin posuere et et lorem. Nunc a lacus turpis. Nam efficitur urna id porta posuere. Morbi in nunc hendrerit, laoreet mi eu, pretium massa. Proin dapibus interdum justo at vulputate. Phasellus sit amet arcu sodales, dapibus justo quis, sodales sem. Suspendisse porta id libero sed tempor. Duis a justo dolor. Fusce ut lectus efficitur orci aliquet dictum id vel ante. 
+Cras sed purus vulputate, eleifend sem et, semper ligula. Pellentesque hendrerit ligula et nulla ultrices, vitae vestibulum tellus gravida. Maecenas elementum mauris ac mi ullamcorper, non scelerisque nibh tincidunt. Nam pharetra in urna eget tincidunt. Curabitur ligula enim, molestie quis convallis vitae, tincidunt convallis velit. Nulla facilisi. Etiam sagittis scelerisque tortor vel egestas. Suspendisse sodales magna eu eros vestibulum gravida. Aenean luctus nibh mi, et ornare leo ornare et. Cras ultrices venenatis odio, eget dignissim nisl convallis eu. Praesent molestie arcu ut dolor dignissim, quis accumsan ipsum pulvinar. Curabitur facilisis mollis arcu sed maximus. Aenean id mi nec magna cursus pulvinar. Aliquam auctor orci sed nibh volutpat congue. Aliquam vitae eros nisl. Vivamus volutpat, urna dignissim commodo finibus, dui mauris euismod lorem, in euismod eros dolor non est. 
+Nam fermentum tincidunt accumsan. Praesent dolor urna, congue in tortor id, maximus interdum felis. Morbi sollicitudin libero vel felis pharetra iaculis. Etiam et auctor lorem, eget vulputate lacus. Proin a maximus metus. Nam quis consequat neque. Suspendisse efficitur nec erat vel laoreet. Mauris imperdiet lacinia eleifend. Quisque ornare eros at mi maximus consequat. Nulla ex tellus, semper non aliquam in, scelerisque at ex. Etiam aliquet venenatis libero vitae scelerisque. Aliquam erat volutpat. Etiam et eros sit amet ligula vestibulum scelerisque non in magna. Sed consequat, lacus vitae volutpat euismod, mauris enim hendrerit justo, ut tincidunt velit velit sit amet sapien. 
+Vestibulum libero elit, pretium nec euismod nec, iaculis sed odio. Duis ligula lectus, cursus ut consectetur luctus, molestie et tellus. Proin posuere egestas arcu, id posuere tellus varius nec. Nunc mi turpis, luctus et erat suscipit, commodo molestie urna. Cras id velit nec orci porttitor tempus. Phasellus a elit tristique, rhoncus ipsum aliquam, lobortis purus. Donec at porta lorem, nec ullamcorper augue. Mauris volutpat sem eu enim congue sodales. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer sed odio non justo tristique viverra sit amet sit amet nisl. 
+In id maximus lacus. Vivamus felis ligula, fermentum sed quam quis, ultrices dictum ipsum. Ut ut laoreet arcu, eget ullamcorper tellus. Phasellus eu nisi at neque cursus feugiat a sit amet eros. Nam lobortis justo quis leo porttitor feugiat. Suspendisse vel elit dignissim, placerat odio vitae, fermentum mi. Pellentesque massa justo, rhoncus ac lorem ut, venenatis faucibus felis. Maecenas id turpis quis nunc maximus facilisis. Nunc cursus turpis quis egestas commodo. 
