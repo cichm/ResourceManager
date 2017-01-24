@@ -7,11 +7,11 @@ private:
 	T first_;
 	T second_;
 public:
-	T (Vide<T>::compare)(void) noexcept;
+	T compare(void) noexcept;
 public:
-	void (Vide<T>::set)(T first, T second) noexcept;
+	void set(T first, T second) noexcept;
 public:
-	bool (Vide<T>::operator==)(Vide& vide) const noexcept;
+	bool operator==(Vide& vide) const noexcept;
 };
 
 template <class T>

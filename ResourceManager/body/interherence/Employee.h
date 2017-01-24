@@ -46,6 +46,6 @@ public:
 public:
 	inline bool (Employee::operator==)(Employee& rhs) const noexcept
 	{
-		if (this->name_ == rhs.name_);
+		
 	}
 };
