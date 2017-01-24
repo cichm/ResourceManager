@@ -22,16 +22,16 @@ public:
 		salary_ = employee__.salary_;
 	}
 public:
-	Employee::Employee()
+	Employee::Employee(void)
 	{
 	}
 public:
-	std::string Employee::getName()
+	std::string Employee::getName(void)
 	{
 		return name_;
 	}
 public:
-	double Employee::getSalary()
+	double Employee::getSalary(void)
 	{
 		return salary_;
 	}
@@ -40,5 +40,12 @@ public:
 	{
 		double month_Salary__ = salary_ * byPercent / 100;
 		salary_ += month_Salary__;
+
+		return;
+	}
+public:
+	inline bool (Employee::operator==)(Employee& rhs) const noexcept
+	{
+		if (this->name_ == rhs.name_);
 	}
 };
